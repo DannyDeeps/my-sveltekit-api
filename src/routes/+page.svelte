@@ -1,2 +1,5 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Available Resources</h1>
+
+{#each [{name: 'forms', url: '/forms'}] as res}
+    <a href={res.url}>{res.name}</a>
+{/each}
