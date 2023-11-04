@@ -1,8 +1,7 @@
 {
   "forms": [
     {
-      "id": 1,
-      "name": "default",
+      "id": "default",
       "steps": [
         {
           "id": 1,
@@ -43,15 +42,8 @@
       ]
     },
     {
-      "id": 2,
-      "name": "otherform",
+      "id": "otherform",
       "steps": []
-    }
-  ],
-  "records": [
-    {
-      "id": 1,
-      "name": "test"
     }
   ]
 }
