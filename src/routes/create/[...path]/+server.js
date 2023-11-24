@@ -1,28 +1,28 @@
 import { json } from '@sveltejs/kit';
-import { env } from "$env/dynamic/private";
+import { env } from '$env/dynamic/private';
 
 /** @type {import("./$types").RequestHandler} */
 export async function GET({ params }) {
-  let newForm = {
-    name: "newform",
-    steps: []
-  };
+	let newForm = {
+		name: 'newform',
+		steps: []
+	};
 
-  console.log(`${env.DB_HOST}/${params.path}`);
+	console.log(`${env.DB_HOST}/${params.path}`);
 
-  const response = await fetch(`${env.DB_HOST}/${params.path}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(newForm)
-  });
+	const response = await fetch(`${env.DB_HOST}/${params.path}`, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(newForm)
+	});
 
-  let data = {};
+	let data = {};
 
-  if (response.ok) {
-    data = await response.json();
-  }
+	if (response.ok) {
+		data = await response.json();
+	}
 
-  return json(data);
+	return json(data);
 }

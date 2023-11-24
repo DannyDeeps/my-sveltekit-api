@@ -2,8 +2,8 @@
 	import Input from '$lib/form/fields/Input.svelte';
 	import Select from '$lib/form/fields/Select.svelte';
 
-  export let step;
-  console.log(step);
+	export let step;
+	console.log(step);
 </script>
 
 <div class="form-wrapper">

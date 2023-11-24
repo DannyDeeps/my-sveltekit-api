@@ -8,7 +8,7 @@
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"db": "json-server --watch db.json --routes routes.json"
+		"db": "json-server --host 127.0.0.1 --watch db.json --routes routes.json"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",

@@ -1,22 +1,23 @@
 import { json } from '@sveltejs/kit';
-import { env } from "$env/dynamic/private";
+import { env } from '$env/dynamic/private';
 
 import Step from '$lib/form/Step.svelte';
 
 /** @type {import("./$types").RequestHandler} */
 export async function GET({ params }) {
-  const response = await fetch(`${env.DB_HOST}/forms/${params.form}`);
-  if (!response.ok) {
-    return json({ error: response.statusText });
-  }
+	const response = await fetch(`${env.DB_HOST}/forms/${params.form}`);
+	if (!response.ok) {
+		return json({ error: response.statusText });
+	}
 
-  const form = await response.json();
+	const form = await response.json();
 
-  const step = form.steps.find(step => {
-    return step.id === parseInt(params.step);
-  });
+	const step = form.steps.find((step) => {
+		return step.id === parseInt(params.step);
+	});
 
-  let component = Step.render({ step });
+	let component = Step.render({ step });
+	component.style = `<style>${component.css.code}</style>`;
 
-  return json(component);
+	return json(component);
 }
