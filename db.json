@@ -48,11 +48,11 @@
     {
       "id": "otherform",
       "steps": [
-				{
-					"id": 1,
-					"name": "Step 1",
-					"fields": [
-						{
+        {
+          "id": 1,
+          "name": "Step 1",
+          "fields": [
+            {
               "type": "select",
               "name": "amount",
               "label": "Amount",
@@ -74,11 +74,11 @@
                   "display": "25,000"
                 }
               ],
-              "size": 4	
-						}
-					]
-				}
-			]
+              "size": 4
+            }
+          ]
+        }
+      ]
     }
   ],
   "accounts": [
@@ -87,10 +87,5 @@
       "name": "Test Account"
     }
   ],
-  "tokens": [
-    {
-      "token": "test",
-      "id": 1
-    }
-  ]
+  "tokens": []
 }
